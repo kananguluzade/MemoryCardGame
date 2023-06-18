@@ -1,0 +1,114 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 35px;
+  color: red;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-image: url(../assests/4k-marvel-digital-cartoon-t9z4pnuivn6488jq.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  width: 500px;
+  height: 550px;
+  perspective: 1200px;
+}
+
+.tools {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+}
+.fa-rotate-right {
+  font-size: 35px;
+  color: red;
+  cursor: pointer;
+}
+.fa-lightbulb {
+  font-size: 35px;
+  color: yellow;
+  cursor: pointer;
+}
+
+.solidBox {
+  display: flex;
+  gap: 40px;
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 1.5s cubic-bezier(0.47, 1.64, 0.41, 0.8);
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+}
+.front {
+  object-fit: cover;
+}
+.back {
+  backface-visibility: hidden;
+}
+
+.rotate {
+  transform: rotateY(180deg);
+}
+
+.help {
+  border: 3px solid yellow;
+  border-radius: 10px;
+  transform: scale(1.05);
+}
+
+/*MEDIA QUERY*/
+@media (max-width: 768px) {
+  .game {
+    max-width: 350px !important;
+    height: 550px !important;
+  }
+  h1 {
+    font-size: 30px !important;
+  }
+  .tools {
+    max-width: 350px !important;
+  }
+  .fa-solid {
+    font-size: 25px !important;
+  }
+  .solidBox {
+    gap: 25px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .game {
+    width: 600px;
+    height: 700px;
+  }
+
+  .tools {
+    max-width: 600px;
+  }
+}
