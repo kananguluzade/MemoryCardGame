@@ -2,7 +2,7 @@
 
 You can play this game from: <span><a href="https://kananguluzade.github.io/MemoryCardGame/"> This Link</span>
   <br>
-  You have 10 Chanses;
+  You have 10 Chances;
   <br>
   You have 2 Help.
   <br><hr>
